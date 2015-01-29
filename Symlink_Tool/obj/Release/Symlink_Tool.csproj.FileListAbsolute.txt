@@ -1,0 +1,12 @@
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\bin\Release\Symlink_Tool.exe.config
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\bin\Release\Symlink_Tool.exe
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\bin\Release\Symlink_Tool.pdb
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\MainWindow.baml
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\MainWindow.g.cs
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\App.g.cs
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\Symlink_Tool_MarkupCompile.cache
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\Symlink_Tool.g.resources
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\Symlink_Tool.Properties.Resources.resources
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\Symlink_Tool.csproj.GenerateResource.Cache
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\Symlink_Tool.exe
+C:\Users\ian.rich\Documents\GitHub\Symlink_Tool\Symlink_Tool\obj\Release\Symlink_Tool.pdb

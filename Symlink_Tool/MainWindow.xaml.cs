@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Media;
 
 namespace Symlink_Tool
 {
@@ -26,6 +28,11 @@ namespace Symlink_Tool
             InitializeComponent();
         }
 
+        string newLinkPath, source, linkName;
+
+        SoundPlayer player = new SoundPlayer(Properties.Resources.LOZ_Secret);
+       
+
         private void SourceFolderDropped(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -38,6 +45,9 @@ namespace Symlink_Tool
                 foreach (string droppedFilePath in droppedFilePaths)
                 {
                     ListBoxItem fileItem = new ListBoxItem();
+
+                    source = droppedFilePath;
+                    linkName = System.IO.Path.GetFileNameWithoutExtension(droppedFilePath);
 
                     fileItem.Content = System.IO.Path.GetFileNameWithoutExtension(droppedFilePath);
                     fileItem.ToolTip = droppedFilePath;
@@ -60,6 +70,8 @@ namespace Symlink_Tool
                 {
                     ListBoxItem fileItem = new ListBoxItem();
 
+                    newLinkPath = droppedFilePath;
+
                     fileItem.Content = System.IO.Path.GetFileNameWithoutExtension(droppedFilePath);
                     fileItem.ToolTip = droppedFilePath;
 
@@ -70,7 +82,22 @@ namespace Symlink_Tool
 
         private void RunJunction(object sender, RoutedEventArgs e)
         {
-            string filePath = @"C:\Users\ian.rich\Tools\Sysinternals\junction.exe";
+            // junction command: junction <path to new link> "<path to source>"
+
+            string arg1 = newLinkPath + "\\" + linkName;
+            string arg2 = "\"" + source + "\"";
+
+            string currentDir = System.AppDomain.CurrentDomain.BaseDirectory;
+
+            string filePath = currentDir + "junction.exe";
+            string arguments = arg1 + " " + arg2;
+
+            if (File.Exists(filePath))
+            {
+                System.Diagnostics.Process.Start(filePath, arguments);
+                player.Play();
+            }
+
         }
 
     }
