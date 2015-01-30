@@ -90,7 +90,7 @@ namespace Symlink_Tool
             string currentDir = System.AppDomain.CurrentDomain.BaseDirectory;
 
             string filePath = currentDir + "junction.exe";
-            string arguments = arg1 + " " + arg2;
+            string arguments = "\"" + arg1 + "\"" + " " + "\"" + arg2 + "\""; // enclosing args in quotes to handle spaces in path
 
             if (File.Exists(filePath))
             {
